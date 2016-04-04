@@ -39,8 +39,8 @@ class CrashSymbolicator
       `cp #{self.get_symbolicatecrash_path} #{self.local_symbolicatecrash_path}`
 
       # 2. Applying deadlock patch
-      `curl -o #{self.local_symbolicatecrash_patch_path} https://raw.githubusercontent.com/zqxiaojin/OptSymbolicatecrash/master/fix_dead_loop.patch`
-      `patch #{self.local_symbolicatecrash_path} #{self.local_symbolicatecrash_patch_path}`
+      `curl -o #{self.local_patch_path} https://raw.githubusercontent.com/zqxiaojin/OptSymbolicatecrash/master/fix_dead_loop.patch`
+      `patch #{self.local_symbolicatecrash_path} #{self.local_patch_path}`
     end
   end
 
